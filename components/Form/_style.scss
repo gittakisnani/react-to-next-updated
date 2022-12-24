@@ -1,0 +1,105 @@
+.contactForm{
+    .formInput{
+        margin-bottom: 30px;
+        input,
+        textarea,
+        select{
+            background: rgba(55, 54, 53, 0.2);
+            height: 50px;
+            padding: 6px 15px;
+            color: rgb(21, 20, 20);
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 1px solid var(--COLOR-ICON-LIGHT);
+            &:focus{
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-color:  var(--COLOR-TEXT-DARK);
+            }
+            &::-webkit-input-placeholder{
+                color:  var(--COLOR-TEXT-DARK);
+                font-size: 14px;
+            }
+        }
+        select{
+            color:  var(--COLOR-TEXT-DARK);
+            position: relative;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            -moz-appearance: none;
+            background:  var(--COLOR-TERTIARY) url(../../images/select-icon.png) no-repeat calc(100% - 15px) center;
+        }
+        textarea{
+            height: 150px;
+            padding: 15px;
+        }
+        p{
+            text-transform: uppercase;
+            font-size: 12px;
+            color: var(--COLOR-TEXT-DARK);
+        }
+    }
+    
+    .formInputWhiteBG{
+        margin-bottom: 30px;
+        input,
+        textarea,
+        select{
+            background: rgba(115, 112, 104, 0.2);
+            height: 50px;
+            padding: 6px 15px;
+            color: rgb(18, 16, 16);
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 1px solid var(--COLOR-ICON-LIGHT);
+            &:focus{
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-color:  var(--COLOR-TEXT-DARK);
+            }
+            &::-webkit-input-placeholder{
+                color:  var(--COLOR-TEXT-DARK);
+                font-size: 14px;
+            }
+        }
+        select{
+            color:  var(--COLOR-TEXT-DARK);
+            position: relative;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            -moz-appearance: none;
+            background:  var(--COLOR-TERTIARY) url(../../images/select-icon.png) no-repeat calc(100% - 15px) center;
+        }
+        textarea{
+            height: 150px;
+            padding: 15px;
+        }
+        p{
+            text-transform: uppercase;
+            font-size: 12px;
+            color: black;
+        }
+    }
+    
+    button{
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--COLOR-HEADER-TEXT-ACTIVE);
+          padding: 9px 25px;
+        border: 2px solid transparent;
+        text-transform: capitalize;
+        display: inline-block;
+        transition: all .3s;
+        background: var(--COLOR-TEXT-DARK);
+        &:hover{
+            background: var(--COLOR-HEADER-TEXT-ACTIVE);
+            color:var(--COLOR-TEXT-DARK)
+        }
+    }
+}
