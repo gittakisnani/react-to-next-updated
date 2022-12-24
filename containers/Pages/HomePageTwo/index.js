@@ -86,7 +86,7 @@ const portfolioItem = [
     { images: portfolio5, title: 'Business Accounting', subtitle: 'Family Issue' }
 ]
 
-const HomePageTwo = ({ categories, articles }) => {
+const HomePageTwo = () => {
     return (
         <Fragment>
             <header className="headerArea">
@@ -112,14 +112,14 @@ const HomePageTwo = ({ categories, articles }) => {
                 subTitle="Area Of Practice"
                 services={services}
             />
-            <Portfolio
+            {/* <Portfolio
                 className="portfolioArea"
                 title="Our Resent Case Studies"
                 subTitle="Here Our Best Work"
                 portfolioItem={portfolioItem}
                 categories={categories}
                 articles={articles}
-            />
+            /> */}
             <Testmonial
                 className="testmonialArea"
             />

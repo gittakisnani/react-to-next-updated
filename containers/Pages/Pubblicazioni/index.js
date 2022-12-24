@@ -2,14 +2,9 @@ import React, { Fragment } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
-import SearchSidebar from '../../../components/SearchSidebar'
-import CetagorySidebar from '../../../components/CetagorySidebar'
 import RecentPosts from '../../../components/RecentPosts'
 import Pubblicazioni from '../../../components/Pubblicazioni'
-import Tags from '../../../components/Tags'
-import Instagram from '../../../components/Instagram'
 // images
 const breadcumbMenu = [
     { name: 'Home', route: '/' },

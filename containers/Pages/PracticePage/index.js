@@ -4,9 +4,6 @@ import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
 import Service from '../../../components/Service'
 import ServiceArea from '../../../components/ServiceArea'
-import Testmonial from "../../../components/Testmonial";
-import PricingTable from "../../../components/PricingTable";
-import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
 // images
 import { ServiziConfig } from '../../../services-config/servizi-studio';

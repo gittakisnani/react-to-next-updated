@@ -5,7 +5,6 @@ import HeroSlider from '../../../components/HeroSlider'
 import Service from '../../../components/Service'
 import About from '../../../components/About'
 import ServiceArea from '../../../components/ServiceArea'
-import Portfolio from '../../../components/Portfolio'
 import Testmonial from "../../../components/Testmonial";
 import ContactArea from '../../../components/ContactArea'
 import TeamMember from '../../../components/TeamMember'
@@ -87,7 +86,7 @@ const portfolioItem = [
     { images: portfolio5, title: 'Business Accounting', subtitle: 'Family Issue' }
 ]
 
-const HomePageThree = ({ categories, articles }) => {
+const HomePageThree = () => {
     return (
         <Fragment>
             <header className="headerArea headerAreaStyleThree">
@@ -111,14 +110,14 @@ const HomePageThree = ({ categories, articles }) => {
                 subTitle="Area Of Practice"
                 services={services}
             />
-            <Portfolio
+            {/* <Portfolio
                 className="portfolioArea"
                 title="Our Resent Case Studies"
                 subTitle="Here Our Best Work"
                 portfolioItem={portfolioItem}
                 categories={categories}
                 articles={articles}
-            />
+            /> */}
             <Testmonial
                 className="testmonialArea"
             />

@@ -1,18 +1,10 @@
 import React, { Fragment } from 'react'
-import Link from 'next/link'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
-import SearchSidebar from '../../../components/SearchSidebar'
-import CetagorySidebar from '../../../components/CetagorySidebar'
 import RecentPublication from '../../../components/RecentPublication'
 import BlogPost from '../../../components/BlogPost'
-import Tags from '../../../components/Tags'
-import Instagram from '../../../components/Instagram'
-// images
-import breadcumb from '../../../images/breadcumb/1.jpg'
 
 const breadcumbMenu = [
     { name: 'Home', route: '/' },
@@ -30,7 +22,7 @@ const BlogLeftPage = ({ articles = [], categories = [], publications }) => {
                 className="breadcumbArea"
                 title="Sentenze"
                 breadcumbMenu={breadcumbMenu}
-                background={breadcumb}
+                background={'breadcumb/1.jpg'}
             />
             <div className="blogPostArea blogPostLeftArea">
                 <div className="container">

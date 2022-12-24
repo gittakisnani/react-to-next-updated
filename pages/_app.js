@@ -1,8 +1,8 @@
+import 'font-awesome/css/font-awesome.min.css' 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'font-awesome/css/font-awesome.min.css'
-import '../css/flaticon.css'
-import '../css/odometer-theme-default.css'
-import '../css/animate.css'
+import '../css/flaticon.min.css'
+import '../css/odometer-theme-default.min.css'
+import '../css/animate.min.css'
 import '../styles/components.scss'
 import '../styles/pages.scss'
 import '../styles/index.scss'
@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }) {
   // <Component {...pageProps} />
   // </Provider>
 
-  return <Component {...pageProps} />
+  return (
+    <Component {...pageProps} />
+  )
 }
 
 export default MyApp

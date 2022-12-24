@@ -2,16 +2,10 @@ import React, { Fragment, useState, useEffect } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
-import CetagorySidebar from '../../../components/CetagorySidebar'
-import FooterArea from '../../../components/FooterArea'
 import BannerSidebar from '../../../components/BannerSidebar'
 import SingleContentArea from '../../../components/SingleContentArea'
 
 // images
-import banner from '../../../images/practice/2.jpg'
-import single from '../../../images/practice/3.jpg'
-import { useRouter } from 'next/router'
 
 // config file 
 import { ServiziConfig } from '../../../services-config/servizi-studio';

@@ -1,64 +1,14 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionTitle from '../Title'
 import Link from "next/link";
 
-// images
-import teamMember1 from '../../images/expert/andrea-manzi-avv-1.jpg'
-import teamMember2 from '../../images/expert/2.jpg'
-import teamMember3 from '../../images/expert/3.jpg'
-import teamMember4 from '../../images/expert/4.jpg'
-import teamMember5 from '../../images/expert/5.jpg'
-import teamMember6 from '../../images/expert/6.jpg'
 import { CollaboratoriConfig } from '../../services-config/collaboratori';
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const Slider = dynamic(() => import('react-slick'))
-
-/*const teams = [
-    {
-        id: 1,
-        bio: 'biografia descrizione ',
-        name: 'Stefano Bertuzzi', level: 'Amministrativista - Appalti Pubblici', image: teamMember1, socialMedia: [
-            ''
-        ]
-    },
-    {
-        id: 2,
-        bio: 'biografia descrizione ',
-
-        name: 'Céline Cusumano', level: 'Specializzato in professioni legali', image: teamMember2, socialMedia: [
-            ''
-        ]
-    },
-    {
-        id: 3,
-        bio: 'biografia descrizione ',
-
-        name: 'Cristina Brugoni', level: 'Diritto amministrativo - Diritto del lavoro', image: teamMember3, socialMedia: [
-            ''
-        ]
-    },
-    {
-        id: 4,
-        bio: 'biografia descrizione ',
-
-        name: 'Nicoletta Biagi', level: 'Diritto amministrativo - Diritto civile', image: teamMember4, socialMedia: [
-            ''
-        ]
-    },
-    {
-        id: 5,
-        bio: 'biografia descrizione ',
-
-        name: 'Sujata Thapa', level: 'Contratti - Gestione dei contenziosi ', image: teamMember6, socialMedia: [
-            ''
-        ]
-    },
-]
-*/
 
 const settings = {
     dots: false,
@@ -120,9 +70,10 @@ const TeamMember = ({ className, title, subTitle, slider, noGutters }) => {
                                 {teams.map((team, i) => (
 
                                     <div key={i} className="teamWrapper">
-                                        <Link href={'/attorneys-single/' + team.id + ''}>
                                             <div className="teamImage">
-                                                <Image width={400} height={400} src={team.image} alt="" />
+                                                <Link href={'/attorneys-single/' + team.id + ''}> 
+                                                        <Image width={400} height={400} src={team.image} alt="" />
+                                                </Link>
                                             </div>
                                             <div className="teamContent">
                                                 <h3>{team.name}</h3>
@@ -133,7 +84,6 @@ const TeamMember = ({ className, title, subTitle, slider, noGutters }) => {
                                                     ))}
                                                 </ul>
                                             </div>
-                                        </Link>
                                     </div>
 
                                 ))}

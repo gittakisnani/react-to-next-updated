@@ -1,27 +1,11 @@
-import React, { Fragment, useState, useEffect, useMemo } from 'react'
+import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
-import FooterArea from '../../../components/FooterArea'
-import SearchSidebar from '../../../components/SearchSidebar'
-import CetagorySidebar from '../../../components/CetagorySidebar'
 import RecentPosts from '../../../components/RecentPosts'
-import BlogPost from '../../../components/BlogPost'
-import Tags from '../../../components/Tags'
-import Instagram from '../../../components/Instagram'
-//import { Document, pdfjs, Page } from 'react-pdf';
-
-
-
-
-// images
-// import './style.scss';
-import axios from 'axios';
 import Moment from 'moment';
 
-import { TOKEN } from '../../../services/API';
 
 const breadcumbMenu = [
     { name: 'Home', route: '/' },
@@ -99,9 +83,9 @@ const PubblicazioniSingle = ({ categories, articles, publication }) => {
                                                     <Page pageNumber={pageNumber} />
                             </Document>*/}
                                                 <div className="col-12">
-                                                    <a className="readmore" href={url_api + blog.attributes.Media?.data.attributes.url} target="_blank" rel="noopener noreferrer">
+                                                    <Link className="readmore" href={url_api + blog.attributes.Media?.data.attributes.url} target="_blank" rel="noopener noreferrer">
                                                         Scarica contenuto
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
 

@@ -1,28 +1,17 @@
 import React, { Fragment, useState } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-// import HeroSlider from '../../../components/HeroSlider'
 import Service from '../../../components/Service'
 import About from '../../../components/About'
 import ServiceArea from '../../../components/ServiceArea'
-// import Portfolio from '../../../components/Portfolio'
-import Testmonial from "../../../components/Testmonial";
 import ContactArea from '../../../components/ContactArea'
-import CounterArea from '../../../components/CounterArea'
-import BlogArea from '../../../components/BlogArea'
-import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
 // images
 import about from '../../../images/about/1.jpg'
-import about3 from '../../../images/about/3.jpg'
 import signature from '../../../images/about/1.jpg'
 
 // images
 import portfolio1 from '../../../images/studies/1.jpg'
-import portfolio2 from '../../../images/studies/2.jpg'
-import portfolio3 from '../../../images/studies/3.jpg'
-import portfolio4 from '../../../images/studies/4.jpg'
-import portfolio5 from '../../../images/studies/5.jpg'
 
 // config file 
 import { ServiziConfig } from '../../../services-config/servizi-studio';
@@ -30,8 +19,7 @@ import dynamic from 'next/dynamic'
 
 
 //Dynamic imports
-const TeamMember = dynamic(() => import('../../../components/TeamMember'))
-const Portfolio = dynamic(() => import('../../../components/Portfolio'))
+const TeamMember = dynamic(() => import('../../../components/TeamMember'), { ssr: false})
 const HeroSlider = dynamic(() => import('../../../components/HeroSlider')) 
 
 const aboutText = [
@@ -130,14 +118,14 @@ const HomePageOne = ({ categories, articles }) => {
                 subTitle="Area"
                 services={services}
             />
-            <Portfolio
+            {/* <Portfolio
                 className="portfolioArea"
                 title="News"
                 subTitle="Sentenze e Pubblicazioni"
                 portfolioItem={portfolioItem}
                 categories={categories}
                 articles={articles}
-            />
+            /> */}
 
             <ContactArea
                 className="contactArea"
