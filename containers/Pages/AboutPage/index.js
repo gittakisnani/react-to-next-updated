@@ -1,15 +1,11 @@
 import React, { Fragment, useState } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
+import Breadcumb from '../../../components/BreadCumb'
 import Service from '../../../components/Service'
 import About from '../../../components/About'
 import ServiceArea from '../../../components/ServiceArea'
-import Testmonial from "../../../components/Testmonial";
 import TeamMember from '../../../components/TeamMember'
-import CounterArea from '../../../components/CounterArea'
-import BlogArea from '../../../components/BlogArea'
-import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
 // images
 import about1 from '../../../images/about/1.jpg'

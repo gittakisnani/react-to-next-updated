@@ -1,20 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
-import FooterArea from '../../../components/FooterArea'
-import SearchSidebar from '../../../components/SearchSidebar'
-import CetagorySidebar from '../../../components/CetagorySidebar'
-import RecentPosts from '../../../components/RecentPosts'
-import BlogPost from '../../../components/BlogPost'
-import Tags from '../../../components/Tags'
-import Instagram from '../../../components/Instagram'
+import Breadcumb from '../../../components/BreadCumb'
 
 
 import Moment from 'moment';
-import { TOKEN } from '../../../services/API';
-import { fetcher } from '../../../utils/fetcher'
 
 const breadcumbMenu = [
     { name: 'Home', route: '/' },

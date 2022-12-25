@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
-import NewsLetter from '../../../components/Newsletter'
+import Breadcumb from '../../../components/BreadCumb'
 import FooterArea from '../../../components/FooterArea'
 import Form from '../../../components/Form'
 // images
