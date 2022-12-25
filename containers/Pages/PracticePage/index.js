@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
+import Breadcumb from '../../../components/BreadCumb'
 import Service from '../../../components/Service'
 import ServiceArea from '../../../components/ServiceArea'
 import FooterArea from '../../../components/FooterArea'

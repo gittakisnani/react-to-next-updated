@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect, useLayoutEffect } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
+import Breadcumb from '../../../components/BreadCumb'
 import FooterArea from '../../../components/FooterArea'
 import ContactArea from '../../../components/ContactArea'
 import { CollaboratoriConfig } from '../../../services-config/collaboratori';

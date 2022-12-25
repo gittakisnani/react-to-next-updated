@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 import HeaderBotton from '../../../components/HeaderBottom'
 import HeaderTop from '../../../components/HeaderTop'
-import Breadcumb from '../../../components/Breadcumb'
+import Breadcumb from '../../../components/BreadCumb'
 import RecentPosts from '../../../components/RecentPosts'
 import Moment from 'moment';
 
