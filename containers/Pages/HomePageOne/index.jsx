@@ -16,6 +16,8 @@ import portfolio1 from '../../../images/studies/1.jpg'
 // config file 
 import { ServiziConfig } from '../../../services-config/servizi-studio';
 import dynamic from 'next/dynamic'
+import Portfolio from '../../../components/Portfolio'
+// import BlogArea from '../../../components/BlogArea'
 
 
 //Dynamic imports
@@ -118,14 +120,14 @@ const HomePageOne = ({ categories, articles }) => {
                 subTitle="Area"
                 services={services}
             />
-            {/* <Portfolio
+            <Portfolio
                 className="portfolioArea"
                 title="News"
                 subTitle="Sentenze e Pubblicazioni"
                 portfolioItem={portfolioItem}
                 categories={categories}
                 articles={articles}
-            /> */}
+            />
 
             <ContactArea
                 className="contactArea"
@@ -137,11 +139,11 @@ const HomePageOne = ({ categories, articles }) => {
                 slider={true}
             />
 
-            { /*<BlogArea
-                className="blogArea"
-                title="Ultime News"
-                subTitle="Rimani aggiornato"
-    />*/}
+            {/* <BlogArea
+                            className="blogArea"
+                            title="Ultime News"
+                            subTitle="Rimani aggiornato"
+                /> */}
 
             <FooterArea />
         </Fragment>

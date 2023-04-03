@@ -56,14 +56,9 @@ const portfolioItem = [
 ]
 
 const SingleTeamPage = () => {
-
-
-
-    const params = useRouter().query;
-
-    const [IdCollab, setIdCollab] = useState(params.id)
+    const id = useRouter().query?.id;
     const [collab, setCollab] = useState({})
-    const [AllCollab, setAllCollab] = useState(CollaboratoriConfig())
+    const AllCollab = CollaboratoriConfig()
 
     const [bioformatted, setbioformatted] = useState([])
 
@@ -71,16 +66,11 @@ const SingleTeamPage = () => {
 
 
     useEffect(() => {
-
-        console.log('params', params);
-        console.log('IdCollab', IdCollab);
-
-
-        const found = AllCollab.find(obj => {
+        const found = AllCollab?.find(obj => {
             const lines = obj.bio.split('\n')
             setbioformatted(lines);
             console.log('obj', obj)
-            return obj.id == IdCollab;
+            return obj.id == id;
         });
 
         setCollab(found);
@@ -89,7 +79,7 @@ const SingleTeamPage = () => {
         console.log('colllab  found :', collab);
 
 
-    }, [collab]);
+    }, [id]);
 
 
     return (
@@ -115,13 +105,13 @@ const SingleTeamPage = () => {
                                 <div className="col-md-6 col-12">
                                     <div className="singleTeamImgWrap">
                                         <div className="singleTeamImg">
-                                            <img src={collab.image} alt="" />
+                                            <img src={collab?.image} alt="" />
                                         </div>
-                                        {collab.avvocato ? (
-                                            <h4>{'Avv. ' + collab.name}</h4>
+                                        {collab?.avvocato ? (
+                                            <h4>{'Avv. ' + collab?.name}</h4>
 
                                         ) : (
-                                            <h4>{collab.name}</h4>
+                                            <h4>{collab?.name}</h4>
 
                                         )}
 
@@ -136,20 +126,20 @@ const SingleTeamPage = () => {
 
                                             <li>
                                                 <span>Ruolo</span>
-                                                {collab.ruolo}
+                                                {collab?.ruolo}
                                             </li>
                                             <li>
                                                 <span>Indirizzo</span>
-                                                {collab.indirizzo}
+                                                {collab?.indirizzo}
                                             </li>
 
                                             <li>
                                                 <span>Email</span>
-                                                {collab.email}
+                                                {collab?.email}
                                             </li>
                                             <li>
                                                 <span>Pec</span>
-                                                {collab.pec}
+                                                {collab?.pec}
                                             </li>
 
                                         </ul>
@@ -163,7 +153,7 @@ const SingleTeamPage = () => {
                                 </div>
                                 <div className="col-12">
                                     <div className="singleTeamInfo">
-                                        {collab.fondatore ? (
+                                        {collab?.fondatore ? (
                                             <h3>Esperienza Personale </h3>
 
                                         ) : (

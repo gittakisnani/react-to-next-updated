@@ -9,6 +9,7 @@ import SingleContentArea from '../../../components/SingleContentArea'
 
 // config file 
 import { ServiziConfig } from '../../../services-config/servizi-studio';
+import { useRouter } from 'next/router'
 
 
 const breadcumbMenu = [
@@ -19,23 +20,18 @@ const breadcumbMenu = [
 
 
 
-const PracticeSinglePage = ({ params }) => {
-    const [IdService, setIdService] = useState(params.id)
-    const [AllService, setAllService] = useState(ServiziConfig())
-
+const PracticeSinglePage = () => {
+    const router = useRouter();
+    const id = router.query?.id;
+    const Allservice = ServiziConfig()
     const [service, setService] = useState({})
 
 
 
     useEffect(() => {
-
-        console.log('params', params);
-        console.log('IdService', IdService);
-
-
-        const found = AllService.find(obj => {
+        const found = Allservice?.find(obj => {
             console.log('obj', obj)
-            return obj.id == IdService;
+            return obj.id == id;
         });
 
         setService(found);
@@ -43,7 +39,7 @@ const PracticeSinglePage = ({ params }) => {
 
 
 
-    }, [params, service]);
+    }, [id]);
 
 
     return (
@@ -64,7 +60,7 @@ const PracticeSinglePage = ({ params }) => {
                         <div className="col-lg-4">
                             <aside className=" pr25">
                                 <BannerSidebar
-                                    image={service.image}
+                                    image={service?.image}
                                     className="bannerWrapper"
                                 />
                                 {/* <CetagorySidebar
@@ -75,10 +71,10 @@ const PracticeSinglePage = ({ params }) => {
                         </div>
                         <div className="col-lg-8">
                             <SingleContentArea
-                                title={service.title}
-                                content={service.content}
+                                title={service?.title}
+                                content={service?.content}
                                 className="singleContentArea"
-                                image={service.image}
+                                image={service?.image}
                                 avatar={true}
                             />
                         </div>
