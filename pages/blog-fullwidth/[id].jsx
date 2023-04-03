@@ -15,7 +15,7 @@ const BlogFullWidthPage = ({ article }) => {
 export default BlogFullWidthPage
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const token = TOKEN();
   //Fetching Single Article
   const article = await fetcher(`articolos/${context.params.id}?populate=*`, token);
@@ -27,13 +27,13 @@ export async function getStaticProps(context) {
   }
 }
 
-export async function getStaticPaths() {
-  const token = TOKEN();
-  const articles = await fetcher('articolos?populate=*', token);
+// export async function getStaticPaths() {
+//   const token = TOKEN();
+//   const articles = await fetcher('articolos?populate=*', token);
 
 
-  return {
-    paths: articles.map(article => ({ params: { id: String(article.id) } })),
-    fallback: false
-  }
-}
+//   return {
+//     paths: articles.map(article => ({ params: { id: String(article.id) } })),
+//     fallback: false
+//   }
+// }
